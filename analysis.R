@@ -77,8 +77,10 @@ knnmodel <- train(
   tuneLength = 10
 )
 
+png("images/knn-rmse-vs-k.png", width = 900, height = 600)
 # Plot model error RMSE vs different values of k
 plot(knnmodel)
+dev.off()
 # Best tuning parameter k 
 knnmodel$bestTune
 # k=5 is the one that minimizes the prediction error RMSE 
@@ -140,12 +142,16 @@ l3predictions <-predict(lmodel.3, test.data)
 RMSE(l3predictions, test.data$sales)
 # RMSE hasdecreased to 0.5134645, a huge decrease from the kNN and previous regression models
 par(mfrow=c(1,1))
-plot(test.data$sales, l3predictions, main="Prediction performance of linear regression")
+png("images/final-model-pred-vs-actual.png", width = 900, height = 600)
+plot(test.data$sales, l3predictions, main="Final Model: Predicted vs Actual")
 abline(0,1, col="red")
+dev.off()
 # All predicted values are very close to the actual values of sales in the test set
 # Check residual plots
+png("images/final-model-residuals.png", width = 1000, height = 800)
 par(mfrow=c(2,2))
 plot(lmodel.3)
+dev.off()
 # Residual plot now shows a horizontal line at 0 with no clear quadratic pattern,
 # The fitting is good enough although there is still an outlier namely, 131
 

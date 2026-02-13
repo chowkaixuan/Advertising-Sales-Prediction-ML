@@ -77,3 +77,14 @@ analysis.R
 - ggplot2
 - corrplot
 - psych
+
+## visual Results
+
+### kNN Tuning (RMSE vs k)
+![kNN RMSE](images/knn-rmse-vs-k.png)
+
+### Final Model: Predicted vs Actual
+![Final Model Predictions](images/final-model-pred-vs-actual.png)
+
+### Residual Diagnostics (Final Model)
+![Final Model Residuals](images/final-model-residuals.png)
