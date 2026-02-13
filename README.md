@@ -83,8 +83,11 @@ analysis.R
 ### kNN Tuning (RMSE vs k)
 ![kNN RMSE](images/knn-rmse-vs-k.png)
 
-### Final Model: Predicted vs Actual
-![Final Model Predictions](images/final-model-pred-vs-actual.png)
+### kNN: Predicted vs Actual
+![kNN Predicted vs Actual](images/knn-pred-vs-actual.png)
 
-### Residual Diagnostics (Final Model)
-![Final Model Residuals](images/final-model-residuals.png)
+### Enhanced Linear Regression: Predicted vs Actual
+![Enhanced LM Predicted vs Actual](images/final-model-pred-vs-actual.png)
+
+### Enhanced Model Residual Diagnostics
+![Enhanced LM Residuals](images/final-model-residuals.png)
