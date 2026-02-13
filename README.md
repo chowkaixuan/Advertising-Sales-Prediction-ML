@@ -42,17 +42,16 @@ It contains 200 advertising experiments with:
 ## Results (Test RMSE)
 
 - kNN: ~1.37  
-- Linear Regression: ~1.95  
-- Polynomial Regression: ~1.95  
-- Polynomial + Interaction Model: ~0.51  
+- Linear Regression (Baseline): ~1.95  
+- Linear Regression (Enhanced): ~0.51 
 
-The interaction-enhanced regression model significantly outperformed kNN and basic regression.
+The interaction-enhanced regression model significantly reduced test RMSE, outperforming both kNN and the baseline linear regression.
 
 ## Key Insights
 
 - YouTube and Facebook spending strongly influence sales.
-- Newspaper spending has weak predictive power.
-- Residual diagnostics revealed nonlinear patterns(quadratic).
+- Newspaper spending shows significantly lower correlation with sales compared to YouTube and Facebook.
+- Residual diagnostics revealed nonlinear (quadratic) patterns.
 - Feature engineering (interaction terms) drastically improved performance.
 - A well-specified parametric model outperformed kNN.
 
@@ -78,7 +77,7 @@ analysis.R
 - corrplot
 - psych
 
-## visual Results
+## Visual Results
 
 ### kNN Tuning (RMSE vs k)
 ![kNN RMSE](images/knn-rmse-vs-k.png)
@@ -91,3 +90,10 @@ analysis.R
 
 ### Enhanced Model Residual Diagnostics
 ![Enhanced LM Residuals](images/final-model-residuals.png)
+
+## Mathematical Notes
+
+For deeper understanding and derivation of the correlation coefficient and R-squared,
+see:
+
+- [Pearson Correlation Derivation](notes/Pearson_Correlation_Coefficient_and_R_squared_Derivation.pdf)
